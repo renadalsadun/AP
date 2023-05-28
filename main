@@ -1,0 +1,194 @@
+package com.example.project2;
+
+
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.geometry.Pos;
+import javafx.scene.Cursor;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.RadioButton;
+import javafx.scene.control.ToggleGroup;
+import javafx.scene.layout.*;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
+import javafx.scene.text.Text;
+import javafx.stage.Stage;
+
+import java.io.IOException;
+import java.util.ArrayList;
+
+public class main extends Application {
+
+    public static Boolean isSplash=false;
+
+    @Override
+    public void start(Stage stage) throws IOException {
+
+        //CongratsController.loadSplashScreen();
+        Parent root = FXMLLoader.load(getClass().getResource("lvl3question1.fxml"));
+//
+//        BorderPane pane = new BorderPane();
+//        RadioButton rb0 = new RadioButton("hi0");
+//        RadioButton rb1 = new RadioButton("hi1");
+//        RadioButton rb2 = new RadioButton("hi2");
+//        ToggleGroup tg = new ToggleGroup();
+//        rb0.setToggleGroup(tg);
+//        rb1.setToggleGroup(tg);
+//        rb2.setToggleGroup(tg);
+//        rb0.setStyle("-jfx-selected-color: red");
+//        VBox vbox = new VBox(rb0,rb1,rb2);
+//        vbox.setSpacing(10);
+//        vbox.setAlignment(Pos.CENTER);
+//        vbox.setPadding(new Insets(10,10,10,10));
+//        pane.setCenter(vbox);
+//////////////////QUESTIONS////////////////
+//        BorderPane gamelvl3pane = new BorderPane();
+//        Text[] lvl3questions = new Text[10]; //questions array of type Texy
+//        RadioButton[] lvl3choice = new RadioButton[20]; //answers array of type Radio Button
+//        ArrayList<ToggleGroup> lvl3toggle = new ArrayList<>(10);//toggles arraylist of type Toggle to connect radiobutton
+//        ArrayList<HBox> lvl3toggleHbox = new ArrayList<>(10);//hboxes to add each group of radio button in
+//        VBox lvl3FinalQuestionsVbox = new VBox(); //vbox to add all questions and style 'em
+//        GridPane lvl3FinalChoicesGrid = new GridPane(); // gridpane to add all choices-hbox- and style 'em
+//
+//        for (int i = 0; i <= 10; i++) {
+//            lvl3toggle.add(new ToggleGroup());//adding empty toggles to lvl3toggle
+//            //lvl3toggleHbox.add(new HBox());//adding empty hboxes to lvl3toggleHbox
+//        }
+//
+//        ///////////////////PROPERTIES///////////////////
+//        //properties
+//        lvl3FinalQuestionsVbox.setSpacing(20);
+//        lvl3FinalChoicesGrid.setVgap(20);
+//        lvl3FinalChoicesGrid.setHgap(20);
+//        lvl3FinalChoicesGrid.getColumnConstraints().add(new ColumnConstraints(150));
+//        lvl3FinalChoicesGrid.getColumnConstraints().add(new ColumnConstraints(150));
+//
+//        lvl3FinalChoicesGrid.getRowConstraints().add(new RowConstraints(50));
+//        lvl3FinalChoicesGrid.setGridLinesVisible(true);
+//
+//
+//
+//        ///////////////////DATA///////////////////
+//        //questions and choices
+//        lvl3questions[0] = new Text("Q1:  What is the first node in the Scene Graph ?");
+//        lvl3choice[0] = new RadioButton("A. Graph");
+//        lvl3choice[1] = new RadioButton("B. RootNode");//correct
+//
+//        lvl3questions[1] = new Text("Q2:  Which types of panes places the nodes in single column? ");
+//        lvl3choice[2] = new RadioButton("A.VBox ");//correct
+//        lvl3choice[3] = new RadioButton("B. HBox");
+//
+//
+//        lvl3questions[2] = new Text("Q3:  Which attribute permits the column to be marked NOT NULL when the schema is generated?");
+//        lvl3choice[4] = new RadioButton("A. Nullable");//correct
+//        lvl3choice[5] = new RadioButton("B. Editable");
+//
+//        lvl3questions[3] = new Text("Q4:  Is it possible to create a stage in init() method?");
+//        lvl3choice[6] = new RadioButton("A. Yes");
+//        lvl3choice[7] = new RadioButton("B. No");//correct
+//
+//        lvl3questions[4] = new Text("Q5:  Adding a node to a pane multiple times will cause?");
+//        lvl3choice[8] = new RadioButton("A. Runtime Error");//correct
+//        lvl3choice[9] = new RadioButton("B. Compile Time Error");
+//
+//        lvl3questions[5] = new Text("Q6:  What is the object that is a component for placing text?");
+//        lvl3choice[10] = new RadioButton("A. TextField");
+//        lvl3choice[11] = new RadioButton("B. Label");//correct
+//
+//        lvl3questions[6] = new Text("Q7:  What is the graphical component that enables you to choose a single item from a group of choices?");
+//        lvl3choice[12] = new RadioButton("A. RadioButton");//correct
+//        lvl3choice[13] = new RadioButton("B. CheckBox");
+//
+//        lvl3questions[7] = new Text("Q8:  What is the type of this handler:  \n"
+//                + "    btEnlarge.setOnAction( (e) -> {\n" + "    c.setRadius( c.getRadius() + 2 );\n" + "    } );");
+//        lvl3choice[14] = new RadioButton("A. InnerClass");
+//        lvl3choice[15] = new RadioButton("B. Lambda");//correct
+//
+//        lvl3questions[8] = new Text("Q9:  What is the return type of the method getText()?");
+//        lvl3choice[16] = new RadioButton("A. Node");//
+//        lvl3choice[17] = new RadioButton("B. String");//correct
+//
+//        lvl3questions[9] = new Text("Q10: Relational Model represents the database as a collection of?");
+//        lvl3choice[18] = new RadioButton("A. Tables");//correct
+//        lvl3choice[19] = new RadioButton("B. Objects");//?
+//
+//
+//        ///////////////////CHOICES///////////////////
+//
+//
+//        //loop for adding relative radio buttons to a toggle group
+//        for (int i = 0, j = 0; i < lvl3choice.length; i = i + 2, j++) {
+//            lvl3choice[i].setAlignment(Pos.TOP_LEFT);
+//            lvl3choice[i+1].setAlignment(Pos.TOP_LEFT);
+//            lvl3choice[i].setFont(Font.font("Cambria", 12));
+//            lvl3choice[i+1].setFont(Font.font("Cambria", 12));
+//            lvl3choice[i].setStyle("-fx-text-fill: white");
+//            lvl3choice[i+1].setStyle("-fx-text-fill: white");
+//
+//            lvl3choice[i].setToggleGroup(lvl3toggle.get(j));
+//            lvl3choice[i + 1].setToggleGroup(lvl3toggle.get(j));
+//        }
+//
+//
+//        //loop for adding all choices in the gridpane
+//        for (int i = 0, j=0, k=1 ; i < lvl3choice.length ; i=i+2, j++,k=k+2){
+//            lvl3FinalChoicesGrid.add(lvl3choice[i],1,j);
+//            lvl3FinalChoicesGrid.add(lvl3choice[k],2,j);
+//        }
+//
+//
+//        gamelvl3pane.setRight(lvl3FinalChoicesGrid);// adding the final choices vbox to the main pane
+//
+//        ///////////////////QUESTIONS///////////////////
+//
+//        // styling questions
+//        for (int i = 0, j = 0; i <= lvl3questions.length - 1; i++, j = j + 2) {
+//
+//            lvl3questions[i].setFont(Font.font("Cambria", 15));//styling the text-questions- font and size
+//            lvl3questions[i].setStyle("-fx-background-color: #f6d7d5");//styling the text-questions- background color
+//            lvl3questions[i].setFill(Color.web("white"));//styling the text-questions- text color
+//            //adding the questions to the pane
+//            lvl3FinalChoicesGrid.add(lvl3questions[i],0 , i);
+//            lvl3FinalQuestionsVbox.getChildren().add(lvl3questions[i]);
+//
+//        }
+//        //gamelvl3pane.setLeft(lvl3FinalQuestionsVbox);// adding the final questions vbox to the main pain
+//
+//
+//
+//        ///////////////////ACTIONS///////////////////
+//
+//        //actions
+//        for (int i = 0; i < lvl3choice.length; i++){
+//            final int index = i;
+//            lvl3choice[i].setOnMouseEntered(e->{
+//
+//                // lvl3FinalChoicesGrid[index].setStyle("-fx-background-color: #ffb700");
+//                lvl3choice[index].setFont(Font.font("Verdana", 15));
+//                lvl3choice[index].setCursor(Cursor.E_RESIZE);
+//            });
+//            lvl3choice[i].setOnMouseExited(e->{
+//
+//                lvl3choice[index].setStyle("-fx-background-color: #0000ff");//8c8b99
+//                lvl3choice[index].setFont(Font.font("Cambria", 13));
+//
+//            });
+//
+//
+//        }
+
+        ///////////////////////////////
+        Scene scene = new Scene(root,800,600);
+        stage.setScene(scene);
+        stage.setTitle("?");
+        stage.show();
+
+
+    }
+    public static void main(String[] args) {
+        launch(args);
+    }
+
+
+}
