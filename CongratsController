@@ -1,0 +1,11 @@
+package com.example.project2;
+
+import javafx.fxml.FXML;
+import javafx.scene.layout.AnchorPane;
+
+
+public class CongratsController {
+    @FXML
+    AnchorPane root;
+
+}
