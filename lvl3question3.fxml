@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="root" fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project2.lvl3question3Controller">
+    <children>
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="42.0" layoutY="129.0" prefHeight="23.0" prefWidth="746.0" stylesheets="@gamelvl3css.css" text="Which attribute permits the column to be marked " textFill="WHITE">
+            <font>
+                <Font name="Arial Rounded MT Bold" size="36.0" />
+            </font>
+            <effect>
+                <Bloom />
+            </effect>
+        </Label>
+        <Button id="choicesBtn" fx:id="choice1" layoutX="251.0" layoutY="252.0" mnemonicParsing="false" onAction="#choice1Clicked" prefHeight="26.0" prefWidth="385.0" styleClass="choices" stylesheets="@gamelvl3css.css" text="Nullable" textFill="#8f2929">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+            <opaqueInsets>
+                <Insets bottom="1.0" left="1.0" right="2.0" top="-4.0" />
+            </opaqueInsets></Button>
+        <Button id="choicesBtn" fx:id="choice2" layoutX="251.0" layoutY="340.0" mnemonicParsing="false" onAction="#choice2Clicked" prefHeight="26.0" prefWidth="184.0" styleClass="choices" stylesheets="@gamelvl3css.css" text="Editable" textFill="#8f2929">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor></Button>
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="338.0" layoutY="40.0" prefHeight="40.0" prefWidth="124.0" styleClass="question" stylesheets="@gamelvl3css.css" text="Q3" textFill="WHITE">
+            <font>
+                <Font size="36.0" />
+            </font>
+            <effect>
+                <Bloom />
+            </effect>
+        </Label>
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="138.0" layoutY="152.0" prefHeight="32.0" prefWidth="548.0" stylesheets="@gamelvl3css.css" text="NOT NULL when the schema is generated?" textFill="WHITE">
+            <effect>
+                <Bloom />
+            </effect>
+        </Label>
+        <Button fx:id="nextBtn" disable="true" layoutX="598.0" layoutY="535.0" mnemonicParsing="false" onAction="#nextClicked" styleClass="nextbuttons" stylesheets="@gamelvl3css.css" text=" next &gt;&gt;">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor></Button>
+    </children>
+</AnchorPane>
