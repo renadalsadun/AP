@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+
+/* buttons -choices styling */
+
+.choices {
+    /* Styling for all Control with the class of 'button' */
+    -fx-font-size: 1.2em;
+    -fx-text-fill: black;
+    -fx-font-family: "Press Start 2P", cursive;
+    -fx-background-color: grey ;
+    -fx-border-width: 0px; /* was 0px */
+    -fx-border-color: black;
+    -fx-pref-width: 300px;
+    -fx-pref-height: 60px;
+    -fx-effect: dropshadow(one-pass-box, #000000, -4, 2, 1,1),
+     dropshadow(three-pass-box, red, -4, 2, 1,1),
+     dropshadow(three-pass-box, green, 4, 0, 1,1);
+
+}
+
+#choicesBtn
+{
+
+    -fx-padding: 8 15 15 15;
+    -fx-background-insets: 0,0 0 5 0,0 0 6 0,0 0 7 0;
+    -fx-background-radius: 8;
+    -fx-background-color:
+            linear-gradient(from 0% 93% to 0% 100%, #595351 0%, #42403d 100),
+            #6b5f5c,
+            #86827c,
+            radial-gradient(center 50% 50%,radius 100%, #8a8888, #5b5653);
+
+    /*  linear-gradient(from 0% 93% to 0% 100%,#a34313 0%,#903b12 100%),
+           #9d4024,
+           #d86e3a,
+           radial-gradient(center 50% 50%, radius 100%,#d96e3a,#c54e2c);*/
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.75),4,0,0,1);
+    -fx-font-weight: bold;
+    -fx-font-size: 1.1em;
+    -fx-text-fill: white;
+}
+
+#choicesBtn:hover
+{
+
+    -fx-background-color:
+            linear-gradient(from 0% 93% to 0% 100%, #595351 0%, #42403d 100),
+            #6b5f5c,
+            #86827c,
+            radial-gradient(center 50% 50%,radius 100%, #afacac, #5b5653);
+}
+
+#choicesBtn:pressed
+{
+    -fx-padding: 10 15 13 15;
+    -fx-background-insets: 2 0 0 0,2 0 3 0,2 0 4 0,2 0 5 0;
+
+}
+
+/*wrong choice styling*/
+
+#wrongAnswer
+{
+
+    -fx-padding: 8 15 15 15;
+    -fx-background-insets: 0,0 0 5 0,0 0 6 0,0 0 7 0;
+    -fx-background-radius: 8;
+    -fx-background-color:
+            linear-gradient(from 0% 93% to 0% 100%, #8d0a0a 0%, #5e0303 100),
+            #860e0e,
+            #c90000,
+            radial-gradient(center 50% 50%,radius 100%, #ff0000, #5e0000);
+
+    /*  linear-gradient(from 0% 93% to 0% 100%,#a34313 0%,#903b12 100%),
+           #9d4024,
+           #d86e3a,
+           radial-gradient(center 50% 50%, radius 100%,#d96e3a,#c54e2c);*/
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.75),4,0,0,1);
+    -fx-font-weight: bold;
+    -fx-font-size: 1.1em;
+    -fx-text-fill: white;
+}
+
+#wrongAnswer:hover
+{
+
+    -fx-background-color:
+            linear-gradient(from 0% 93% to 0% 100%, #8d0a0a 0%, #5e0303 100),
+            #860e0e,
+            #c90000,
+            radial-gradient(center 50% 50%,radius 100%, #ff1f1f, #5e0000);
+}
+
+#wrongAnswer:pressed
+{
+    -fx-padding: 10 15 13 15;
+    -fx-background-insets: 2 0 0 0,2 0 3 0,2 0 4 0,2 0 5 0;
+
+}
+
+/*right choice styling*/
+
+#rightAnswer
+{
+
+    -fx-padding: 8 15 15 15;
+    -fx-background-insets: 0,0 0 5 0,0 0 6 0,0 0 7 0;
+    -fx-background-radius: 8;
+    -fx-background-color:
+            linear-gradient(from 0% 93% to 0% 100%, #1a6500 0%, #0b4800 100),
+            #0f8a06,
+            #0f9b01,
+            radial-gradient(center 50% 50%,radius 100%, #00d300, #004d00);
+
+    /*  linear-gradient(from 0% 93% to 0% 100%,#a34313 0%,#903b12 100%),
+           #9d4024,
+           #d86e3a,
+           radial-gradient(center 50% 50%, radius 100%,#d96e3a,#c54e2c);*/
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.75),4,0,0,1);
+    -fx-font-weight: bold;
+    -fx-font-size: 1.1em;
+    -fx-text-fill: white;
+}
+
+#rightAnswer:hover
+{
+
+    -fx-background-color:
+            linear-gradient(from 0% 93% to 0% 100%, #1a6500 0%, #0b4800 100),
+            #0f8a06,
+            #0f9b01,
+            radial-gradient(center 50% 50%,radius 100%, #00ff00, #004d00);
+}
+
+#rightAnswer:pressed
+{
+    -fx-padding: 10 15 13 15;
+    -fx-background-insets: 2 0 0 0,2 0 3 0,2 0 4 0,2 0 5 0;
+
+}
+
+/* congrats styling */
+
+.congrats{
+    /* Styling for all Control with the class of 'congrats' */
+    -fx-font-size: 1.7em;
+    -fx-font-family: "Press Start 2P", cursive;
+
+    -fx-border-width: 0px; /* was 0px */
+    -fx-border-color: white;
+    -fx-wrap-text: true;
+
+    width: 200px;
+    height: 70px;
+    position: relative;
+    box-shadow:
+            inset -4px 2px 1px 1px grey,
+            inset -4px -2px 1px 1px lightgray,
+            inset 4px 0px 1px 1px lightgray;
+
+}
+
+/* questions styling */
+
+.label{
+    /* Styling for all Control with the class of 'label'
+    -the question-*/
+    -fx-font-size: 1.0em;
+    -fx-font-family: "Press Start 2P", cursive;
+
+    -fx-border-width: 0px; /* was 0px */
+    -fx-border-color: white;
+    -fx-wrap-text: true;
+
+
+
+    width: 200px;
+    height: 70px;
+    position: relative;
+    box-shadow:
+            inset -4px 2px 1px 1px grey,
+            inset -4px -2px 1px 1px lightgray,
+            inset 4px 0px 1px 1px lightgray;
+
+}
+
+.question{
+    /* Styling for all Control with the class of 'label' */
+    -fx-font-size: 2.2em;
+    -fx-font-family: "Press Start 2P", cursive;
+    -fx-border-width: 0px; /* was 0px */
+    -fx-border-color: white;
+    -fx-wrap-text: true;
+    width: 200px;
+    height: 70px;
+
+}
+
+/* next styling */
+
+
+.nextbuttons {
+    /* Styling for all Control with the class of 'button' */
+    -fx-font-size: 1.0em;
+    -fx-font-family: "Press Start 2P", cursive;
+    -fx-background-color: transparent ;
+    -fx-border-width: 0px; /* was 0px */
+    -fx-border-color: black;
+    -fx-pref-width: 150px;
+    -fx-pref-height: 30px;
+    -fx-text-fill: #d00303;
+    -fx-effect: dropshadow(one-pass-box, #000000, -4, 2, 1,1),
+    dropshadow(three-pass-box, red, -4, 2, 1,1),
+    dropshadow(three-pass-box, green, 4, 0, 1,1);
+
+}
+.nextbuttons:hover{
+    -fx-text-fill: red;
+}
+
+
